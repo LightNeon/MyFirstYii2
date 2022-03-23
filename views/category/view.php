@@ -8,5 +8,5 @@
 
 <br><br>
 <h2>Список статей по категории: <?= $model['title'] ?>
-	
+	<p>For new commit</p>
 </h2>
