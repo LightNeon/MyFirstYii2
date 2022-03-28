@@ -27,6 +27,13 @@ class PostController extends Controller
                         'delete' => ['POST'],
                     ],
                 ],
+            /*    'files' => [
+                    'class' => 'floor12\files\components\FileBehaviour',
+                    'attributes' => [
+                        'avatar'
+                    ]
+                    ],
+            */
             ]
         );
     }
@@ -131,4 +138,6 @@ class PostController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+
 }

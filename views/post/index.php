@@ -24,28 +24,30 @@
 
 ?>
 
+<div class="container">
 <div class="row">
 
 	<?php $form = ActiveForm::begin([
 		'method' => 'get',
 	]); ?>
 
-	<br><br><br>
-	<div class="col-sm-12 col-md-1">
+	<br>
+	<div class="col-md-12">
 		Поиск
 	</div>
 
-	<div class="col-sm-16 col-md-16">
+	<div class="col-sm-12">
 		<?= $form->field($searchModel, 'text')->textInput(['placeholder' => 'Введите строку для поиска'])->label(false);
 		?>
 	</div>
 
-	<div class="col-sm-12 col-md-1">
+	<div class="col-sm-12">
 		<?= Html::submitButton('Искать', ['class' => 'btn btn-primary']) ?>
 	</div>
 	
 	<?php ActiveForm::end(); ?>
 
+</div>
 </div>
 
 

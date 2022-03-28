@@ -28,6 +28,12 @@ class Post extends \yii\db\ActiveRecord
                 'updatedAtAttribute' => false,
                 'value' => time(),
             ],
+            'files' => [
+                'class' => 'floor12\files\components\FileBehaviour',
+                'attributes' => [
+                    'mainImage',
+                ],
+            ],
         ];
     }
 
@@ -46,11 +52,12 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'category_id'], 'required'],
+            [['title', 'category_id', 'mainImage'], 'required'],
             [['text'], 'string'],
             [['created_at', 'category_id'], 'integer'],
             [['title'], 'string', 'max' => 50],
             [['lead'], 'string', 'max' => 150],
+            ['mainImage', 'file', 'extensions' => ['jpg', 'png', 'jpeg', 'gif'], 'maxFiles' => 1],
         ];
     }
 

@@ -11,6 +11,7 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+        '@floor12/files' => '@app/modules/floor12/yii2-module-files/src'
     ],
     'components' => [
         'request' => [
@@ -54,6 +55,14 @@ $config = [
         
     ],
     'params' => $params,
+    'modules' => [
+        'files' => [
+            'class' => 'floor12\files\Module',
+            'storage' => '@app/storage',
+            'cache' => '@app/storage_cache',
+            'token_salt' => 'hdhmyrk7utkufyr6',
+        ],
+    ],
 ];
 
 if (YII_ENV_DEV) {
@@ -71,6 +80,8 @@ if (YII_ENV_DEV) {
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
+
+    
 }
 
 return $config;

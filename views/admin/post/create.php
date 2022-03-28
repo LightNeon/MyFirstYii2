@@ -1,3 +1,4 @@
+<br>
 <?php
 
 use yii\helpers\Html;
@@ -5,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Post */
 
-$this->title = 'Create Post';
+$this->title = 'Создать пост';
 $this->params['breadcrumbs'][] = ['label' => 'Posts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
